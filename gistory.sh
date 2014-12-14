@@ -6,7 +6,7 @@ do
 	echo ${repo}
 	cd ${repo}
 	git pull
-	git log --since `date -d "-14 day" "+%F"` --pretty=medium
+	git log --since `date -d "-14 day" "+%F"` --pretty=format:'%Cgreen %an: %Creset %s' --abbrev-commit
 	cd .. #and go back
 done
 
